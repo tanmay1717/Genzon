@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/popup.css">
+</head>
+<body>
+  <div class="popup">
+    <div class="header">
+      <span class="logo">🔍 Genzon</span>
+      <span class="version">v0.1.0</span>
+    </div>
+
+    <div class="status" id="status">
+      <span class="dot" id="dot"></span>
+      <span id="status-text">Checking...</span>
+    </div>
+
+    <div class="info">
+      <p>Fake Review Detector for Amazon</p>
+      <p class="hint">Open any Amazon product page to see review scores.</p>
+    </div>
+
+    <div class="actions">
+      <button id="btn-reanalyze" class="btn btn-primary">Re-analyze Reviews</button>
+      <button id="btn-settings" class="btn btn-secondary">Settings</button>
+    </div>
+
+    <div class="settings-panel" id="settings-panel" style="display: none;">
+      <label>
+        API URL:
+        <input type="text" id="api-url" value="http://localhost:8000" />
+      </label>
+      <button id="btn-save" class="btn btn-primary">Save</button>
+    </div>
+
+    <div class="footer">
+      <a href="http://localhost:8000/docs" target="_blank">API Docs</a>
+      <span>|</span>
+      <span>ML-powered detection</span>
+    </div>
+  </div>
+
+  <script src="scripts/popup.js"></script>
+</body>
+</html>

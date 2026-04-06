@@ -1,0 +1,170 @@
+/* Genzon — Injected styles for Amazon review pages */
+
+/* ── Per-review badge ── */
+
+.genzon-badge {
+    display: inline-flex;
+    align-items: center;
+    margin: 6px 0;
+    border-radius: 6px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 13px;
+    line-height: 1;
+    cursor: default;
+    transition: opacity 0.2s;
+  }
+  
+  .genzon-badge:hover {
+    opacity: 0.85;
+  }
+  
+  .genzon-badge-inner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+    border-radius: 6px;
+  }
+  
+  .genzon-score {
+    font-weight: 700;
+    font-size: 15px;
+  }
+  
+  .genzon-label {
+    font-weight: 500;
+  }
+  
+  .genzon-brand {
+    font-size: 10px;
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Colors */
+  .genzon-genuine .genzon-badge-inner {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #a3d9b1;
+  }
+  
+  .genzon-uncertain .genzon-badge-inner {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #f0d77e;
+  }
+  
+  .genzon-fake .genzon-badge-inner {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f1aeb5;
+  }
+  
+  .genzon-flagged .genzon-badge-inner {
+    background: #e2e3e5;
+    color: #383d41;
+    border: 1px solid #c8cbcf;
+  }
+  
+  .genzon-loading .genzon-badge-inner {
+    background: #e8e8e8;
+    color: #666;
+    border: 1px solid #ccc;
+    animation: genzon-pulse 1.5s ease-in-out infinite;
+  }
+  
+  .genzon-error .genzon-badge-inner {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f1aeb5;
+    font-size: 11px;
+  }
+  
+  @keyframes genzon-pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+  
+  /* ── Aggregate score banner ── */
+  
+  .genzon-aggregate {
+    margin: 16px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  
+  .genzon-aggregate-inner {
+    padding: 16px 20px;
+    border-radius: 10px;
+  }
+  
+  .genzon-aggregate-header {
+    margin-bottom: 10px;
+  }
+  
+  .genzon-aggregate-logo {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+  
+  .genzon-aggregate-body {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .genzon-aggregate-score {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+  }
+  
+  .genzon-big-score {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1;
+  }
+  
+  .genzon-out-of {
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.7;
+  }
+  
+  .genzon-aggregate-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .genzon-aggregate-label {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .genzon-aggregate-count {
+    font-size: 12px;
+    opacity: 0.7;
+  }
+  
+  /* Aggregate colors */
+  .genzon-aggregate.genzon-genuine .genzon-aggregate-inner {
+    background: linear-gradient(135deg, #d4edda, #c3e6cb);
+    color: #155724;
+    border: 1px solid #a3d9b1;
+  }
+  
+  .genzon-aggregate.genzon-uncertain .genzon-aggregate-inner {
+    background: linear-gradient(135deg, #fff3cd, #ffeaa0);
+    color: #856404;
+    border: 1px solid #f0d77e;
+  }
+  
+  .genzon-aggregate.genzon-fake .genzon-aggregate-inner {
+    background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+    color: #721c24;
+    border: 1px solid #f1aeb5;
+  }

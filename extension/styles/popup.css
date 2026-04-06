@@ -1,0 +1,157 @@
+/* Genzon — Popup Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 300px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 13px;
+    color: #333;
+    background: #fff;
+  }
+  
+  .popup {
+    padding: 16px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .logo {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  .version {
+    font-size: 11px;
+    color: #999;
+    background: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  
+  .status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: #f8f8f8;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ccc;
+  }
+  
+  .dot.online {
+    background: #28a745;
+  }
+  
+  .dot.offline {
+    background: #dc3545;
+  }
+  
+  .info {
+    margin-bottom: 14px;
+  }
+  
+  .info p {
+    margin-bottom: 4px;
+  }
+  
+  .hint {
+    color: #888;
+    font-size: 12px;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .btn {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .btn-primary {
+    background: #0066c0;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background: #004f99;
+  }
+  
+  .btn-secondary {
+    background: #f0f0f0;
+    color: #333;
+  }
+  
+  .btn-secondary:hover {
+    background: #e0e0e0;
+  }
+  
+  .settings-panel {
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 6px;
+    margin-bottom: 12px;
+  }
+  
+  .settings-panel label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  
+  .settings-panel input {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  
+  .footer {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: #999;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+  }
+  
+  .footer a {
+    color: #0066c0;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
