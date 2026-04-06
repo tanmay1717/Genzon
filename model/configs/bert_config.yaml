@@ -1,0 +1,16 @@
+# BERT model variants for ablation study (academic extension #3)
+models:
+  primary:
+    name: "bert-base-uncased"
+    params: 110_000_000
+    notes: "Full BERT-base, best expected accuracy"
+
+  distilbert:
+    name: "distilbert-base-uncased"
+    params: 66_000_000
+    notes: "40% smaller, ablation comparison"
+
+  baseline:
+    name: "tfidf+xgboost"
+    params: null
+    notes: "Non-neural baseline"

@@ -1,0 +1,37 @@
+# Training configuration
+seed: 42
+
+# BERT
+bert:
+  model_name: "bert-base-uncased"
+  max_length: 512
+  batch_size: 16
+  learning_rate: 2.0e-5
+  epochs: 5
+  warmup_steps: 500
+  weight_decay: 0.01
+  fp16: true
+
+# XGBoost baseline
+xgboost:
+  n_estimators: 300
+  max_depth: 6
+  learning_rate: 0.1
+  scale_pos_weight: auto  # auto-calculated from class ratio
+
+# Fusion
+fusion:
+  rule_weight: 0.35
+  bert_weight: 0.65
+  divergence_threshold: 3.0  # flag as uncertain if gap > 3
+
+# Imbalance
+imbalance:
+  strategy: "smote"  # smote | class_weight | hybrid
+  smote_k_neighbors: 5
+
+# Evaluation
+eval:
+  primary_metric: "f1"
+  threshold_tuning: true
+  metrics: ["f1", "auc_roc", "auc_pr", "precision", "recall"]
